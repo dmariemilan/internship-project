@@ -1,23 +1,16 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
+
 from pages.base_page import Page
 
 
 
 class MainPage(Page):
-    ADD_TO_CART_BTN = (By.CSS_SELECTOR, "[id*='addToCartButton']")
-    SIDE_NAV_ADD_TO_CART_BTN = (By.CSS_SELECTOR, "div[class*='ThreeUpButtonWrapper'] button[id*='addToCartButton']")
-    SIDE_NAV_PRODUCT_NAME = (By.CSS_SELECTOR, "h4[class*='StyledHeading']")
+    CTC_BTN = (By.CSS_SELECTOR, "div[class='get-free-period menu']")
 
     def open_main(self):
-        self.driver.get('https://www.target.com/')
+        self.driver.get('https://soft.reelly.io/sign-in')
 
-    def click_add_to_cart(self):
-        self.wait_until_clickable_click(*self.ADD_TO_CART_BTN)
-
-    def side_nav_click_add_to_cart(self):
-        self.wait_until_clickable_click(*self.SIDE_NAV_ADD_TO_CART_BTN)
-
-    def store_product_name(self):
-        self.wait_until_visible(*self.SIDE_NAV_PRODUCT_NAME)
-
+    def click_connect_button(self):
+        self.wait_until_clickable_click(*self.CTC_BTN)
