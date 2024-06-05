@@ -14,6 +14,7 @@ def open_reelly(context):
 @when('Click on Connect the company')
 def click_connect_button(context):
     context.app.main_page.click_connect_button()
+    sleep(10)
 
 
 @when('Switch to new window')

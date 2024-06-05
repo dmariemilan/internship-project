@@ -12,6 +12,7 @@ CONTINUE_BTN = (By.CSS_SELECTOR, "a[class='login-button w-button']")
 @when('Input user email and password and sign in')
 def input_email_and_password(context):
     context.app.sign_in_page.input_email_and_password("donna.milan123@gmail.com", "D0nRee1lly!")
+    sleep(10)
 
 
 
