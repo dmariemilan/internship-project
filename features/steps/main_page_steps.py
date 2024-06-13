@@ -5,7 +5,6 @@ from time import sleep
 
 CTC_BTN = (By.CSS_SELECTOR, "div[class='get-free-period menu']")
 MOB_MENU_BTN = (By.CSS_SELECTOR, "div[class='mobile-top-menu']")
-MOB_CTC_BTN = (By.CSS_SELECTOR, "div[class='get-free-period menu']")
 
 
 

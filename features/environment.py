@@ -18,9 +18,9 @@ def browser_init(context, scenario_name):
     """
     :param context: Behave context
     """
-    #driver_path = ChromeDriverManager().install()
-    #service = Service(driver_path)
-    #context.driver = webdriver.Chrome(service=service)
+    driver_path = ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
     #driver_path = GeckoDriverManager().install()
     #service = Service(driver_path)
@@ -60,12 +60,12 @@ def browser_init(context, scenario_name):
     #context.driver = webdriver.Remote(command_executor=url, options=options)
 
     # mobile emulator (Selenium)
-    mobile_emulation = {"deviceName": "iPhone 12 Pro"}
-    chrome_options = ChromeOptions()
-    chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
-    driver_path = ChromeDriverManager().install()
-    service = Service(driver_path)
-    context.driver = webdriver.Chrome(service=service, options=chrome_options)
+    #mobile_emulation = {"deviceName": "iPhone 12 Pro"}
+    #chrome_options = ChromeOptions()
+    #chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+    #driver_path = ChromeDriverManager().install()
+    #service = Service(driver_path)
+    #context.driver = webdriver.Chrome(service=service, options=chrome_options)
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
