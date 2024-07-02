@@ -7,7 +7,6 @@ CTC_BTN = (By.CSS_SELECTOR, "div[class='get-free-period menu']")
 MOB_MENU_BTN = (By.CSS_SELECTOR, "div[class='mobile-top-menu']")
 
 
-
 @given('Open Reelly main page')
 def open_reelly(context):
     context.app.main_page.open_main()

@@ -18,3 +18,5 @@ Feature: Test scenarios for main page functionality
       And Switch to new window
       Then Verify that url has book-presentation
 
+
+
