@@ -8,6 +8,7 @@ from pages.base_page import Page
 class MainPage(Page):
     CTC_BTN = (By.CSS_SELECTOR, "div[class='get-free-period menu']")
     MOB_MENU_BTN = (By.CSS_SELECTOR, "div[class='mobile-top-menu']")
+    SETTINGS_OPTION = (By.XPATH, "//div[contains(@class, 'menu-button-text') and text()='Settings']")
 
     def open_main(self):
         self.driver.get('https://soft.reelly.io/sign-in')
@@ -17,6 +18,13 @@ class MainPage(Page):
 
     def click_connect_button(self):
         self.wait_until_clickable_click(*self.CTC_BTN)
+
+    def click_settings_option(self):
+        self.wait_until_clickable_click(*self.SETTINGS_OPTION)
+
+
+
+
 
 
 

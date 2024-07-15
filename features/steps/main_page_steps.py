@@ -28,6 +28,12 @@ def switch_to_new_window(context):
     sleep(5)
 
 
+@when('Click on settings option')
+def click_settings_option(context):
+    context.app.main_page.click_settings_option()
+
+
+
 
 
 
