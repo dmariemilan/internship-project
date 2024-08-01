@@ -18,3 +18,8 @@ def verify_settings_options(context, expected_amount):
 @then('Verify connect the company button present')
 def verify_connect_button(context):
     context.app.settings_page.verify_connect_button()
+
+
+@when('Click on Edit profile')
+def click_edit_profile(context):
+    context.app.settings_page.click_edit_profile()

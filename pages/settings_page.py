@@ -9,6 +9,7 @@ class SettingsPage(Page):
     SETTINGS_OPTION = (By.CSS_SELECTOR, "a[class='page-setting-block w-inline-block']")
     NUMBER_OF_OPTIONS = (By.CSS_SELECTOR, "a[class='page-setting-block w-inline-block']")
     CONNECT_TO_COMPANY = (By.CSS_SELECTOR, "div[class='settings-block-menu'] div[class='get-free-period menu']")
+    EDIT_PROFILE = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Edit profile']")
 
     def click_settings(self):
         self.wait_until_clickable_click(*self.SETTINGS_OPTION)
@@ -22,6 +23,11 @@ class SettingsPage(Page):
 
     def verify_connect_button(self):
         self.find_element(*self.CONNECT_TO_COMPANY)
+
+    def click_edit_profile(self):
+        self.wait_until_clickable_click(*self.EDIT_PROFILE)
+        sleep(5)
+
 
 
 

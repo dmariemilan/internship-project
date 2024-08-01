@@ -83,5 +83,13 @@ class Page:
     def close(self):
         self.driver.close()
 
+    def clear(self, *locator):
+        self.driver.find_element(*locator).clear()
+
+
+
+
+
+
 
 

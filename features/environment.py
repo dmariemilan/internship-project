@@ -18,7 +18,8 @@ def browser_init(context, scenario_name):
     """
     :param context: Behave context
     """
-    driver_path = ChromeDriverManager().install()
+    #driver_path = ChromeDriverManager().install()
+    driver_path = r'C:\Users\Owner\Desktop\internship-project\chromedriver.exe'
     service = Service(driver_path)
     context.driver = webdriver.Chrome(service=service)
 

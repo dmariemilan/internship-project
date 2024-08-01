@@ -5,6 +5,7 @@ from pages.book_presentation_page import BookPresentationPage
 from pages.mobile_settings_page import MobileSettingsPage
 from pages.sign_up_page import SignUpPage
 from pages.settings_page import SettingsPage
+from pages.profile_page import ProfilePage
 
 
 class Application:
@@ -17,6 +18,8 @@ class Application:
         self.mobile_settings_page = MobileSettingsPage(driver)
         self.sign_up_page = SignUpPage(driver)
         self.settings_page = SettingsPage(driver)
+        self.profile_page = ProfilePage(driver)
+
 
 
 
