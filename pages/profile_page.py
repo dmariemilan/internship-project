@@ -36,16 +36,24 @@ class ProfilePage(Page):
         self.input_text(email, *self.TEST_EMAIL)
 
     def verify_input_name(self, name):
-        actual_name = self.find_element(*self.TEST_NAME)
+        actual_name = self.driver.find_element(*self.TEST_NAME).get_attribute('value')
+        expected_name = 'Test Tester'
+        assert expected_name == actual_name, f'expected {expected_name}, is not {actual_name}'
 
     def verify_input_phone(self, phone):
-        actual_phone = self.find_element(*self.TEST_PHONE)
+        actual_phone = self.find_element(*self.TEST_PHONE).get_attribute('value')
+        expected_phone = '555 555 5555'
+        assert expected_phone == actual_phone, f'expected {expected_phone}, got {actual_phone}'
 
     def verify_input_company(self, company):
-        actual_company = self.find_element(*self.TEST_COMPANY)
+        actual_company = self.find_element(*self.TEST_COMPANY).get_attribute('value')
+        expected_company = 'Testing'
+        assert actual_company == expected_company, f'expected {expected_company}, got {actual_company}'
 
     def verify_input_email(self, email):
-        actual_email = self.find_element(*self.TEST_EMAIL)
+        actual_email = self.find_element(*self.TEST_EMAIL).get_attribute('value')
+        expected_email = 'test@tester.com'
+        assert actual_email == expected_email, f'expected {expected_email}, got {actual_email}'
 
     def click_save_changes_btn(self):
         self.click(*self.SAVE_CHANGES_BTN)

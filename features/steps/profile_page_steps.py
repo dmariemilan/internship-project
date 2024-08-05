@@ -1,5 +1,3 @@
-from lib2to3.fixes.fix_input import context
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from behave import given, when, then
@@ -28,7 +26,8 @@ def input_email(context, email):
 
 @then('Verify the correct information is present in the name input field')
 def verify_input_name(context):
-    context.app.profile_page.verify_input_name("Test Test")
+    context.app.profile_page.verify_input_name("Test Tester")
+    sleep(4)
 
 
 @then('Verify the correct information is present in the phone number input field')
