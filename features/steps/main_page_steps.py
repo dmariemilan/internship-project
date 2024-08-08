@@ -33,6 +33,11 @@ def click_settings_option(context):
     context.app.main_page.click_settings_option()
 
 
+@when('Click on main menu option')
+def click_main_menu_option(context):
+    context.app.main_page.click_main_menu_option()
+
+
 
 
 

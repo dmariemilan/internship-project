@@ -6,6 +6,7 @@ from pages.mobile_settings_page import MobileSettingsPage
 from pages.sign_up_page import SignUpPage
 from pages.settings_page import SettingsPage
 from pages.profile_page import ProfilePage
+from pages.main_menu_page import MainMenuPage
 
 
 class Application:
@@ -19,6 +20,7 @@ class Application:
         self.sign_up_page = SignUpPage(driver)
         self.settings_page = SettingsPage(driver)
         self.profile_page = ProfilePage(driver)
+        self.main_menu_page = MainMenuPage(driver)
 
 
 
