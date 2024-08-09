@@ -10,4 +10,3 @@ Feature: Test scenarios for main menu page functionality
     Then Verify the language has changed
 
 
-    # Enter steps here
