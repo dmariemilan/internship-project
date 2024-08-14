@@ -23,3 +23,8 @@ def verify_connect_button(context):
 @when('Click on Edit profile')
 def click_edit_profile(context):
     context.app.settings_page.click_edit_profile()
+
+
+@when('Click on Add a project')
+def click_add_a_project(context):
+    context.app.settings_page.click_add_a_project()

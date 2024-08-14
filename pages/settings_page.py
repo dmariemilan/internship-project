@@ -10,6 +10,7 @@ class SettingsPage(Page):
     NUMBER_OF_OPTIONS = (By.CSS_SELECTOR, "a[class='page-setting-block w-inline-block']")
     CONNECT_TO_COMPANY = (By.CSS_SELECTOR, "div[class='settings-block-menu'] div[class='get-free-period menu']")
     EDIT_PROFILE = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Edit profile']")
+    ADD_A_PROJECT = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Add a project']")
 
     def click_settings(self):
         self.wait_until_clickable_click(*self.SETTINGS_OPTION)
@@ -27,6 +28,11 @@ class SettingsPage(Page):
     def click_edit_profile(self):
         self.wait_until_clickable_click(*self.EDIT_PROFILE)
         sleep(5)
+
+    def click_add_a_project(self):
+        self.wait_until_clickable_click(*self.ADD_A_PROJECT)
+        sleep(4)
+
 
 
 

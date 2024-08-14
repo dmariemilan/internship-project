@@ -7,6 +7,7 @@ from pages.sign_up_page import SignUpPage
 from pages.settings_page import SettingsPage
 from pages.profile_page import ProfilePage
 from pages.main_menu_page import MainMenuPage
+from pages.add_project_page import AddProjectPage
 
 
 class Application:
@@ -21,6 +22,8 @@ class Application:
         self.settings_page = SettingsPage(driver)
         self.profile_page = ProfilePage(driver)
         self.main_menu_page = MainMenuPage(driver)
+        self.add_project_page = AddProjectPage(driver)
+
 
 
 
