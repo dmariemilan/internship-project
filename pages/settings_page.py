@@ -11,6 +11,7 @@ class SettingsPage(Page):
     CONNECT_TO_COMPANY = (By.CSS_SELECTOR, "div[class='settings-block-menu'] div[class='get-free-period menu']")
     EDIT_PROFILE = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Edit profile']")
     ADD_A_PROJECT = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Add a project']")
+    COMMUNITY_OPTION = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Community']")
 
     def click_settings(self):
         self.wait_until_clickable_click(*self.SETTINGS_OPTION)
@@ -32,6 +33,12 @@ class SettingsPage(Page):
     def click_add_a_project(self):
         self.wait_until_clickable_click(*self.ADD_A_PROJECT)
         sleep(4)
+
+    def click_community(self):
+        self.wait_until_clickable_click(*self.COMMUNITY_OPTION)
+        sleep(4)
+
+
 
 
 

@@ -28,3 +28,14 @@ def click_edit_profile(context):
 @when('Click on Add a project')
 def click_add_a_project(context):
     context.app.settings_page.click_add_a_project()
+
+
+@when('Click on Community')
+def click_community(context):
+    context.app.settings_page.click_community()
+
+
+
+
+
+

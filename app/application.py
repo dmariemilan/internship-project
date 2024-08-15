@@ -8,6 +8,7 @@ from pages.settings_page import SettingsPage
 from pages.profile_page import ProfilePage
 from pages.main_menu_page import MainMenuPage
 from pages.add_project_page import AddProjectPage
+from pages.community_page import CommunityPage
 
 
 class Application:
@@ -23,6 +24,8 @@ class Application:
         self.profile_page = ProfilePage(driver)
         self.main_menu_page = MainMenuPage(driver)
         self.add_project_page = AddProjectPage(driver)
+        self.community_page = CommunityPage(driver)
+
 
 
 
