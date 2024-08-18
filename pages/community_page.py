@@ -17,7 +17,7 @@ class CommunityPage(Page):
 
     def click_contact_support_btn(self):
         sleep(5)
-        #self.wait_until_clickable_click(*self.CONTACT_SUPPORT_BTN)
-        contact_support_btn = self.find_element(*self.CONTACT_SUPPORT_BTN)
-        contact_support_btn.click()
+        self.wait_until_clickable_click(*self.CONTACT_SUPPORT_BTN)
+        #contact_support_btn = self.find_element(*self.CONTACT_SUPPORT_BTN)
+        #contact_support_btn.click()
         sleep(4)
