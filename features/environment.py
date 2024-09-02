@@ -19,9 +19,9 @@ def browser_init(context, scenario_name):
     :param context: Behave context
     """
     #driver_path = ChromeDriverManager().install()
-    #driver_path = r'C:\Users\Owner\Desktop\internship-project\chromedriver.exe'
-    #service = Service(driver_path)
-    #context.driver = webdriver.Chrome(service=service)
+    driver_path = r'C:\Users\Owner\Desktop\internship-project\chromedriver.exe'
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
     #driver_path = GeckoDriverManager().install()
     #service = Service(driver_path)
@@ -46,19 +46,19 @@ def browser_init(context, scenario_name):
 
     ### BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = 'donnamilan_hzilUj'
-    bs_key = 'axuCFRobWW4KLTaqmvxB'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #bs_user = 'donnamilan_hzilUj'
+    #bs_key = 'axuCFRobWW4KLTaqmvxB'
+    #url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
 
-    options = Options()
-    bstack_options = {
-        'os': 'OS X',
-        'osVersion': 'Sonoma',
-        'browserName': 'Safari',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    #options = Options()
+    #bstack_options = {
+        #'os': 'OS X',
+        #'osVersion': 'Sonoma',
+        #'browserName': 'Safari',
+        #'sessionName': scenario_name
+    #}
+    #options.set_capability('bstack:options', bstack_options)
+    #context.driver = webdriver.Remote(command_executor=url, options=options)
 
     # mobile emulator (Selenium)
     #mobile_emulation = {"deviceName": "iPhone 12 Pro"}

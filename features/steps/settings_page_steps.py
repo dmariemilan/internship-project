@@ -35,6 +35,12 @@ def click_community(context):
     context.app.settings_page.click_community()
 
 
+@when('Click on Contact us')
+def click_contact_us(context):
+    context.app.settings_page.click_contact_us()
+
+
+
 
 
 

@@ -12,6 +12,7 @@ class SettingsPage(Page):
     EDIT_PROFILE = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Edit profile']")
     ADD_A_PROJECT = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Add a project']")
     COMMUNITY_OPTION = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Community']")
+    CONTACT_US = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Contact us']")
 
     def click_settings(self):
         self.wait_until_clickable_click(*self.SETTINGS_OPTION)
@@ -37,6 +38,10 @@ class SettingsPage(Page):
     def click_community(self):
         self.wait_until_clickable_click(*self.COMMUNITY_OPTION)
         sleep(4)
+
+    def click_contact_us(self):
+        self.wait_until_clickable_click(*self.CONTACT_US)
+
 
 
 
