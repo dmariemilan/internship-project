@@ -13,6 +13,7 @@ class SettingsPage(Page):
     ADD_A_PROJECT = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Add a project']")
     COMMUNITY_OPTION = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Community']")
     CONTACT_US = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Contact us']")
+    USER_GUIDE = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='User guide']")
 
     def click_settings(self):
         self.wait_until_clickable_click(*self.SETTINGS_OPTION)
@@ -41,6 +42,12 @@ class SettingsPage(Page):
 
     def click_contact_us(self):
         self.wait_until_clickable_click(*self.CONTACT_US)
+
+    def click_user_guide(self):
+        self.wait_until_clickable_click(*self.USER_GUIDE)
+
+
+
 
 
 

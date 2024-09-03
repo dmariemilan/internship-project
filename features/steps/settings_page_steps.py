@@ -40,6 +40,12 @@ def click_contact_us(context):
     context.app.settings_page.click_contact_us()
 
 
+@when('Click on User guide')
+def click_user_guide(context):
+    context.app.settings_page.click_user_guide()
+
+
+
 
 
 

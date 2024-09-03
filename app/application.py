@@ -10,6 +10,7 @@ from pages.main_menu_page import MainMenuPage
 from pages.add_project_page import AddProjectPage
 from pages.community_page import CommunityPage
 from pages.contact_us_page import ContactUsPage
+from pages.user_guide_page import UserGuidePage
 
 
 class Application:
@@ -27,6 +28,8 @@ class Application:
         self.add_project_page = AddProjectPage(driver)
         self.community_page = CommunityPage(driver)
         self.contact_us_page = ContactUsPage(driver)
+        self.user_guide_page = UserGuidePage(driver)
+
 
 
 
