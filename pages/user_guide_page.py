@@ -4,6 +4,7 @@ from time import sleep
 
 from pages.base_page import Page
 
+
 class UserGuidePage(Page):
     VIDEO_TITLES = (By.CSS_SELECTOR, "a[data-sessionlink='feature=player-title']")
 
