@@ -14,6 +14,7 @@ class SettingsPage(Page):
     COMMUNITY_OPTION = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Community']")
     CONTACT_US = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Contact us']")
     USER_GUIDE = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='User guide']")
+    CHANGE_PASSWORD = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Change password']")
 
     def click_settings(self):
         self.wait_until_clickable_click(*self.SETTINGS_OPTION)
@@ -45,6 +46,10 @@ class SettingsPage(Page):
 
     def click_user_guide(self):
         self.wait_until_clickable_click(*self.USER_GUIDE)
+
+    def click_change_password(self):
+        self.wait_until_clickable_click(*self.CHANGE_PASSWORD)
+
 
 
 
