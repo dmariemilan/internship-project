@@ -12,6 +12,7 @@ from pages.community_page import CommunityPage
 from pages.contact_us_page import ContactUsPage
 from pages.user_guide_page import UserGuidePage
 from pages.change_password_page import ChangePasswordPage
+from pages.sub_and_payments_page import SubAndPaymentsPage
 
 
 
@@ -32,6 +33,8 @@ class Application:
         self.contact_us_page = ContactUsPage(driver)
         self.user_guide_page = UserGuidePage(driver)
         self.change_password_page = ChangePasswordPage(driver)
+        self.sub_and_payments_page = SubAndPaymentsPage(driver)
+
 
 
 

@@ -50,6 +50,13 @@ def click_change_password(context):
     context.app.settings_page.click_change_password()
 
 
+@when('Click on subscription & payments')
+def click_subscription_and_payments(context):
+    context.app.settings_page.click_subscription_and_payments()
+
+
+
+
 
 
 
