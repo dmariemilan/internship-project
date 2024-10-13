@@ -55,6 +55,27 @@ def click_subscription_and_payments(context):
     context.app.settings_page.click_subscription_and_payments()
 
 
+@when('Click on support')
+def click_support(context):
+    context.app.settings_page.click_support()
+
+
+@when('Switch to the new window')
+def switch_to_new_window(context):
+    context.app.settings_page.switch_to_new_window()
+
+
+@then('Click on news')
+def click_news(context):
+    context.app.settings_page.click_news()
+
+
+
+
+
+
+
+
 
 
 

@@ -16,6 +16,8 @@ class SettingsPage(Page):
     USER_GUIDE = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='User guide']")
     CHANGE_PASSWORD = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Change password']")
     SUBSCRIPTION_PAYMENTS = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Subscription & payments']")
+    SUPPORT_OPTION = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='Support']")
+    NEWS_OPTION = (By.XPATH, "//div[contains(@class, 'setting-text') and text()='News']")
 
     def click_settings(self):
         self.wait_until_clickable_click(*self.SETTINGS_OPTION)
@@ -53,6 +55,12 @@ class SettingsPage(Page):
 
     def click_subscription_and_payments(self):
         self.wait_until_clickable_click(*self.SUBSCRIPTION_PAYMENTS)
+
+    def click_support(self):
+        self.wait_until_clickable_click(*self.SUPPORT_OPTION)
+
+    def click_news(self):
+        self.wait_until_clickable_click(*self.NEWS_OPTION)
 
 
 
