@@ -38,6 +38,12 @@ def click_main_menu_option(context):
     context.app.main_page.click_main_menu_option()
 
 
+@when('Click on secondary option')
+def click_secondary_option(context):
+    context.app.main_page.click_secondary_option()
+
+
+
 
 
 

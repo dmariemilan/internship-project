@@ -15,6 +15,7 @@ from pages.change_password_page import ChangePasswordPage
 from pages.sub_and_payments_page import SubAndPaymentsPage
 from pages.support_whatsapp_page import SupportWhatsappPage
 from pages.news_telegram_page import NewsTelegramPage
+from pages.secondary_page import SecondaryPage
 
 
 class Application:
@@ -37,6 +38,8 @@ class Application:
         self.sub_and_payments_page = SubAndPaymentsPage(driver)
         self.support_whatsapp_page = SupportWhatsappPage(driver)
         self.news_telegram_page = NewsTelegramPage(driver)
+        self.secondary_page = SecondaryPage(driver)
+
 
 
 
