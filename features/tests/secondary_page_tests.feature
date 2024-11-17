@@ -20,3 +20,13 @@ Feature: Test Scenarios for Secondary Page
       And Click on Apply Filter
       And Verify all cards have for sale tag
 
+  Scenario: User can filter the Secondary deals by 'want to buy' option
+      Given Open Reelly main page
+      When Input user email and password and sign in
+      And Click on Secondary option
+      Then Verify that URL has secondary-listings
+      And Click on Filters
+      And Filter the products by want to buy
+      And Click on Apply Filter
+      And Verify all cards have want to buy tag
+
