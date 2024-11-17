@@ -9,6 +9,11 @@ from pages.base_page import Page
 class SecondaryPage(Page):
     NEXT_PAGE_BUTTON = (By.CSS_SELECTOR, "[wized=nextPageMLS]")
     PREV_PAGE_BUTTON = (By.CSS_SELECTOR, "[wized=previousPageMLS]")
+    FILTER_BUTTON = (By.XPATH, "//div[contains(@class, 'filter-text') and text()='Filters']")
+    WANT_TO_SELL = (By.XPATH, "//div[contains(@class, 'tag-text-filters') and text()='Want to sell']")
+    APPLY_FILTER_BUTTON = (By.CSS_SELECTOR, "[wized=applyFilterButtonMLS]")
+    LISTING_CARDS = (By.CSS_SELECTOR, "[class=listing-card]")
+    FOR_SALE_TAG = (By.CSS_SELECTOR, "[wized=saleTagMLS]")
 
     def go_to_final_page(self):
 
@@ -39,6 +44,25 @@ class SecondaryPage(Page):
                  print('Reached the beginning of the pages')
 
                  break
+
+    def click_on_filters(self):
+        self.wait_until_clickable_click(*self.FILTER_BUTTON)
+
+    def click_want_to_sell(self):
+        self.wait_until_clickable_click(*self.WANT_TO_SELL)
+
+    def click_apply_filter(self):
+        self.wait_until_clickable_click(*self.APPLY_FILTER_BUTTON)
+
+    def verify_all_cards_have_for_sale_tag(self):
+        all_cards = self.wait.until(EC.visibility_of_all_elements_located(self.LISTING_CARDS))
+        for card in all_cards:
+            tag = card.find_element(*self.FOR_SALE_TAG).text
+            assert 'for sale' in tag.lower(), f"Tag does not contain 'for sale' in card: {card}"
+
+
+
+
 
 
 

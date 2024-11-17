@@ -29,6 +29,11 @@ class MainPage(Page):
 
     def click_secondary_option(self):
         self.wait_until_clickable_click(*self.SECONDARY_OPTION)
+        sleep(5)
+
+
+
+
 
 
 
