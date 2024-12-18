@@ -16,6 +16,10 @@ class SecondaryPage(Page):
     LISTING_CARDS = (By.CSS_SELECTOR, "[class=listing-card]")
     FOR_SALE_TAG = (By.XPATH, "//div[contains(@wized, 'saleTagMLS') and text()='For sale']")
     WANT_TO_BUY_TAG = (By.XPATH, "//div[contains(@wized, 'saleTagMLS') and text()='Want to buy']")
+    FROM_TO_INPUT_FIELD = (By.XPATH, "//div[@class='project-block']")
+    UNIT_PRICE_FROM = (By.CSS_SELECTOR, "input[wized='unitPriceFromFilter']")
+    UNIT_PRICE_TO = (By.CSS_SELECTOR, "input[wized='unitPriceToFilter']")
+    LISTING_PRICE = (By.CSS_SELECTOR, "div[wized='unitPriceMLS']")
 
     def go_to_final_page(self):
 
@@ -70,6 +74,27 @@ class SecondaryPage(Page):
         for card in all_cards:
             tag = card.find_element(*self.WANT_TO_BUY_TAG).text
             assert 'want to buy' in tag.lower(), f"Tag does not contain 'want to buy' in card: {card}"
+
+    def filter_products_by_price_range(self):
+        self.wait_until_visible(*self.FROM_TO_INPUT_FIELD)
+        self.input_text('1200000', *self.UNIT_PRICE_FROM)
+        self.input_text('2000000', *self.UNIT_PRICE_TO)
+
+    def verify_price_range_in_all_cards(self):
+        all_cards = self.wait.until(EC.visibility_of_all_elements_located(self.LISTING_CARDS))
+        for card in all_cards:
+            listing_price = card.find_element(*self.LISTING_PRICE)
+            amount = listing_price.text.replace('AED', '').replace(',', '')
+            assert int(amount) in range(1200000, 2000000), f"Price not in Range"
+
+
+
+
+
+
+
+
+
 
 
 

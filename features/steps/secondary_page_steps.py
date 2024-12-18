@@ -44,4 +44,11 @@ def verify_all_cards_have_want_to_buy_tag(context):
     context.app.secondary_page.verify_all_cards_have_want_to_buy_tag()
 
 
+@then('Filter the products by price range from 1200000 to 2000000 AED')
+def filter_products_by_price_range(context):
+    context.app.secondary_page.filter_products_by_price_range()
 
+
+@then('Verify the price in all cards is inside the range (1200000 - 2000000)')
+def verify_price_range_in_all_cards(context):
+    context.app.secondary_page.verify_price_range_in_all_cards()

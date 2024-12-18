@@ -30,3 +30,13 @@ Feature: Test Scenarios for Secondary Page
       And Click on Apply Filter
       And Verify all cards have want to buy tag
 
+  Scenario: User can filter the Secondary deals by Unit price range
+      Given Open Reelly main page
+      When Input user email and password and sign in
+      And Click on Secondary option
+      Then Verify that URL has secondary-listings
+      And Click on Filters
+      And Filter the products by price range from 1200000 to 2000000 AED
+      And Click on Apply Filter
+      And Verify the price in all cards is inside the range (1200000 - 2000000)
+
