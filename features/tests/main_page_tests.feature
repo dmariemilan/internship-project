@@ -18,6 +18,19 @@ Feature: Test scenarios for main page functionality
       And Switch to new window
       Then Verify that url has book-presentation
 
+  Scenario: User can filter the off plan products by Unit price range
+      Given Open Reelly main page
+      When Input user email and password and sign in
+      And Click on off plan side option
+      Then Verify that URL has soft.reelly
+      And Click on off plan Filter
+      And Filter the products by price range from 1200000 to 2000000 AED
+      And Click on off plan Apply Filter
+      And Verify the price in all cards is in the range (1200000 - 2000000)
+
+
+
+
 
 
 

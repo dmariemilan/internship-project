@@ -3,9 +3,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from behave import given, when, then
 from time import sleep
 
-CTC_BTN = (By.CSS_SELECTOR, "div[class='get-free-period menu']")
-MOB_MENU_BTN = (By.CSS_SELECTOR, "div[class='mobile-top-menu']")
-
 
 @given('Open Reelly main page')
 def open_reelly(context):
@@ -41,6 +38,35 @@ def click_main_menu_option(context):
 @when('Click on secondary option')
 def click_secondary_option(context):
     context.app.main_page.click_secondary_option()
+
+
+@when('Click on off plan side option')
+def click_on_off_plan_side_option(context):
+    context.app.main_page.click_on_off_plan_side_option()
+
+
+@then('Click on off plan Filter')
+def click_on_off_plan_filter(context):
+    context.app.main_page.click_on_off_plan_filter()
+
+
+@then('Click on off plan Apply Filter')
+def click_on_off_plan_apply_filter(context):
+    context.app.main_page.click_on_off_plan_apply_filter()
+
+
+@then("Verify the price in all cards is in the range (1200000 - 2000000)")
+def verify_price_in_range(context):
+    context.app.main_page.verify_price_in_range()
+
+
+
+
+
+
+
+
+
 
 
 
