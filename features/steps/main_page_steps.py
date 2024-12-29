@@ -65,8 +65,19 @@ def verify_product_contains_title_and_image(context):
     context.app.main_page.verify_product_contains_title_and_image()
 
 
+@then('Click on sales status filter')
+def click_on_sales_status_filter(context):
+    context.app.main_page.click_on_sales_status_filter()
 
 
+@then('Click on out of stock')
+def click_on_out_of_stock(context):
+    context.app.main_page.click_on_out_of_stock()
+
+
+@then('Verify all cards have Out of Stock tag')
+def verify_all_cards_have_out_of_stock_tag(context):
+    context.app.main_page.verify_all_cards_have_out_of_stock_tag()
 
 
 

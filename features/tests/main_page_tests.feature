@@ -35,6 +35,15 @@ Feature: Test scenarios for main page functionality
       Then Verify that URL has soft.reelly
       And Verify each product on the page contains a title and a picture
 
+  Scenario: User can filter by sales status Out of Stocks
+      Given Open Reelly main page
+      When Input user email and password and sign in
+      And Click on off plan side option
+      Then Verify that URL has soft.reelly
+      And Click on sales status filter
+      And Click on out of stock
+      And Verify all cards have Out of stock tag
+
 
 
 

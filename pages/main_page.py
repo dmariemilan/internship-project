@@ -18,6 +18,10 @@ class MainPage(Page):
     OFF_PLAN_PRICE = (By.CSS_SELECTOR, "div[class='price-value']")
     PROJECT_NAME = (By.CSS_SELECTOR, "div[class='project-name']")
     PROJECT_IMAGE = (By.CSS_SELECTOR, "div[class='project-image']")
+    SALES_STATUS_DROPDOWN = (By.ID, "Location-2")
+    #SALES_STATUS_OUT_OF_STOCK = (By.CSS_SELECTOR, "div[wized='projectStatus']")
+    OUT_OF_STOCK_TAG = (By.XPATH, "//div[contains(@wized, 'projectStatus') and text()='Out of stock']")
+    OUT_OF_STOCK_DROPDOWN = (By.CSS_SELECTOR, "option[value='Out of stock']")
 
     def open_main(self):
         self.driver.get('https://soft.reelly.io/sign-in')
@@ -62,6 +66,28 @@ class MainPage(Page):
             assert len(project_name) == len(all_products), f'Expected {len(all_products)}, got {len(project_name)}'
             project_image = self.find_elements(*self.PROJECT_IMAGE)
             assert len(project_image) == len(all_products), f'Expected {len(all_products)}, got {len(project_image)}'
+
+    def click_on_sales_status_filter(self):
+        self.wait_until_clickable_click(*self.SALES_STATUS_DROPDOWN)
+
+    def click_on_out_of_stock(self):
+        self.wait_until_clickable_click(*self.OUT_OF_STOCK_DROPDOWN)
+
+    def verify_all_cards_have_out_of_stock_tag(self):
+        all_cards = self.wait.until(EC.visibility_of_all_elements_located(self.PROPERTY_CARDS))
+        for card in all_cards:
+            tag = card.find_element(*self.OUT_OF_STOCK_TAG)
+            assert tag.text == 'Out of stock', f"Tag is not 'Out of stock'"
+
+
+
+
+
+
+
+
+
+
 
 
 
