@@ -60,6 +60,9 @@ def verify_price_in_range(context):
     context.app.main_page.verify_price_in_range()
 
 
+@then('Verify each product on the page contains a title and a picture')
+def verify_product_contains_title_and_image(context):
+    context.app.main_page.verify_product_contains_title_and_image()
 
 
 

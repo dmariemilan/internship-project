@@ -16,6 +16,8 @@ class MainPage(Page):
     OP_APPLY_FILTER_BTN = (By.CSS_SELECTOR, "a[wized='applyFilterButton']")
     PROPERTY_CARDS = (By.CSS_SELECTOR, "a[wized='cardOfProperty']")
     OFF_PLAN_PRICE = (By.CSS_SELECTOR, "div[class='price-value']")
+    PROJECT_NAME = (By.CSS_SELECTOR, "div[class='project-name']")
+    PROJECT_IMAGE = (By.CSS_SELECTOR, "div[class='project-image']")
 
     def open_main(self):
         self.driver.get('https://soft.reelly.io/sign-in')
@@ -52,6 +54,14 @@ class MainPage(Page):
             property_price = property.find_element(*self.OFF_PLAN_PRICE)
             amount = property_price.text.replace('AED', '').replace(',', '')
             assert int(amount) in range(1200000, 2000000), f"Price not in Range"
+
+    def verify_product_contains_title_and_image(self):
+        all_products = self.wait.until(EC.visibility_of_all_elements_located(self.PROPERTY_CARDS))
+        for product in all_products:
+            project_name = self.find_elements(*self.PROJECT_NAME)
+            assert len(project_name) == len(all_products), f'Expected {len(all_products)}, got {len(project_name)}'
+            project_image = self.find_elements(*self.PROJECT_IMAGE)
+            assert len(project_image) == len(all_products), f'Expected {len(all_products)}, got {len(project_image)}'
 
 
 

@@ -28,6 +28,12 @@ Feature: Test scenarios for main page functionality
       And Click on off plan Apply Filter
       And Verify the price in all cards is in the range (1200000 - 2000000)
 
+  Scenario: User can see titles and pictures on each product inside the off plan page
+      Given Open Reelly main page
+      When Input user email and password and sign in
+      And Click on off plan side option
+      Then Verify that URL has soft.reelly
+      And Verify each product on the page contains a title and a picture
 
 
 
