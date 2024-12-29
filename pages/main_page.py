@@ -19,7 +19,6 @@ class MainPage(Page):
     PROJECT_NAME = (By.CSS_SELECTOR, "div[class='project-name']")
     PROJECT_IMAGE = (By.CSS_SELECTOR, "div[class='project-image']")
     SALES_STATUS_DROPDOWN = (By.ID, "Location-2")
-    #SALES_STATUS_OUT_OF_STOCK = (By.CSS_SELECTOR, "div[wized='projectStatus']")
     OUT_OF_STOCK_TAG = (By.XPATH, "//div[contains(@wized, 'projectStatus') and text()='Out of stock']")
     OUT_OF_STOCK_DROPDOWN = (By.CSS_SELECTOR, "option[value='Out of stock']")
 
