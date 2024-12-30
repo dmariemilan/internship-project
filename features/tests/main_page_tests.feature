@@ -44,7 +44,13 @@ Feature: Test scenarios for main page functionality
       And Click on out of stock
       And Verify all cards have Out of stock tag
 
-
+  Scenario: User can open the off plan page and go through the pagination
+      Given Open Reelly main page
+      When Input user email and password and sign in
+      And Click on off plan side option
+      Then Verify that URL has soft.reelly
+      And Go to the final page using the pagination button
+      And Go back to the first page using the pagination button
 
 
 

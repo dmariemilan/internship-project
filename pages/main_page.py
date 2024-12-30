@@ -23,6 +23,8 @@ class MainPage(Page):
     OUT_OF_STOCK_DROPDOWN = (By.CSS_SELECTOR, "option[value='Out of stock']")
     FIRST_PRODUCT_TILE = (By.CSS_SELECTOR, "div[class='project-image']")
     MARKET_OPTION = (By.XPATH, "//div[contains(@class, 'menu-button-text') and text()='Market']")
+    #NEXT_PAGE_BUTTON = (By.CSS_SELECTOR, "[wized=nextPageProperties]")
+    #PREV_PAGE_BUTTON = (By.CSS_SELECTOR, "[wized=previousPageProperties]")
 
     def open_main(self):
         self.driver.get('https://soft.reelly.io/sign-in')
