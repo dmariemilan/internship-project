@@ -10,6 +10,8 @@ class MarketPage(Page):
     DEVELOPER_BTN = (By.XPATH, "//div[contains(@class, 'tag-text-proparties') and text()='Developers']")
     LICENSE_TAG = (By.XPATH, "//div[contains(@class, 'license-txt') and text()='License']")
     LICENSE_BLOCK = (By.CSS_SELECTOR, "div[class='license-block']")
+    #NEXT_PAGE_BUTTON = (By.CSS_SELECTOR, "[wized=nextPageMarket]")
+    #PREV_PAGE_BUTTON = (By.CSS_SELECTOR, "[wized=previousPageMarket]")
 
     def click_developers_filter(self):
         self.wait_until_clickable_click(*self.DEVELOPER_BTN)
