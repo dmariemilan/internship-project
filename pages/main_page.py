@@ -21,6 +21,7 @@ class MainPage(Page):
     SALES_STATUS_DROPDOWN = (By.ID, "Location-2")
     OUT_OF_STOCK_TAG = (By.XPATH, "//div[contains(@wized, 'projectStatus') and text()='Out of stock']")
     OUT_OF_STOCK_DROPDOWN = (By.CSS_SELECTOR, "option[value='Out of stock']")
+    FIRST_PRODUCT_TILE = (By.CSS_SELECTOR, "div[class='project-image']")
 
     def open_main(self):
         self.driver.get('https://soft.reelly.io/sign-in')
@@ -78,6 +79,8 @@ class MainPage(Page):
             tag = card.find_element(*self.OUT_OF_STOCK_TAG)
             assert tag.text == 'Out of stock', f"Tag is not 'Out of stock'"
 
+    def click_on_first_product(self):
+        self.wait_until_clickable_click(*self.FIRST_PRODUCT_TILE)
 
 
 

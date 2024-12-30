@@ -80,6 +80,10 @@ def verify_all_cards_have_out_of_stock_tag(context):
     context.app.main_page.verify_all_cards_have_out_of_stock_tag()
 
 
+@when('Click on the first product')
+def click_on_first_product(context):
+    context.app.main_page.click_on_first_product()
+
 
 
 

@@ -16,6 +16,7 @@ from pages.sub_and_payments_page import SubAndPaymentsPage
 from pages.support_whatsapp_page import SupportWhatsappPage
 from pages.news_telegram_page import NewsTelegramPage
 from pages.secondary_page import SecondaryPage
+from pages.off_plan_pdp import OffPlanPdp
 
 
 class Application:
@@ -39,6 +40,8 @@ class Application:
         self.support_whatsapp_page = SupportWhatsappPage(driver)
         self.news_telegram_page = NewsTelegramPage(driver)
         self.secondary_page = SecondaryPage(driver)
+        self.off_plan_pdp = OffPlanPdp(driver)
+
 
 
 
