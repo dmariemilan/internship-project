@@ -22,6 +22,7 @@ class MainPage(Page):
     OUT_OF_STOCK_TAG = (By.XPATH, "//div[contains(@wized, 'projectStatus') and text()='Out of stock']")
     OUT_OF_STOCK_DROPDOWN = (By.CSS_SELECTOR, "option[value='Out of stock']")
     FIRST_PRODUCT_TILE = (By.CSS_SELECTOR, "div[class='project-image']")
+    MARKET_OPTION = (By.XPATH, "//div[contains(@class, 'menu-button-text') and text()='Market']")
 
     def open_main(self):
         self.driver.get('https://soft.reelly.io/sign-in')
@@ -81,6 +82,11 @@ class MainPage(Page):
 
     def click_on_first_product(self):
         self.wait_until_clickable_click(*self.FIRST_PRODUCT_TILE)
+
+    def click_market_option(self):
+        self.wait_until_clickable_click(*self.MARKET_OPTION)
+        sleep(5)
+
 
 
 

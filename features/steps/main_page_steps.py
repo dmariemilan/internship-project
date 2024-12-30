@@ -85,6 +85,11 @@ def click_on_first_product(context):
     context.app.main_page.click_on_first_product()
 
 
+@when('Click on market side option')
+def click_market_option(context):
+    context.app.main_page.click_market_option()
+
+
 
 
 
